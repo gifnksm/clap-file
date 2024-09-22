@@ -16,11 +16,40 @@ Provides types for clap’s derive interface, enabling easy handling of input/ou
 
 ## Usage
 
-Add this to your `Cargo.toml`:
+Run `cargo add clap-file` or add this to your `Cargo.toml`:
 
 ````toml
 [dependencies]
 clap-file = "0.0.0"
+````
+
+## Examples
+
+Example usage of [`Input`](https://docs.rs/clap-file/0.1.0/clap_file/input/struct.Input.html) ans [`Output`](https://docs.rs/clap-file/0.1.0/clap_file/output/struct.Output.html) types:
+
+````rust,no_run
+use std::io::{self, BufRead as _, Write as _};
+
+use clap::Parser as _;
+use clap_file::{Input, Output};
+
+struct Args {
+    /// Input file. If not provided, reads from standard input.
+    input: Input,
+    /// output file. If not provided, reads from standard output.
+    output: Output,
+}
+
+fn main() -> io::Result<()> {
+    let args = Args::parse();
+    let input = args.input.lock();
+    let mut output = args.output.lock();
+    for line in input.lines() {
+        let line = line?;
+        writeln!(&mut output, "{line}")?;
+    }
+    Ok(())
+}
 ````
 <!-- cargo-sync-rdme ]] -->
 
