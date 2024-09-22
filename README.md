@@ -20,12 +20,12 @@ Run `cargo add clap-file` or add this to your `Cargo.toml`:
 
 ````toml
 [dependencies]
-clap-file = "0.1.0"
+clap-file = "0.2.0"
 ````
 
 ## Examples
 
-Example usage of [`Input`](https://docs.rs/clap-file/0.1.0/clap_file/input/struct.Input.html) ans [`Output`](https://docs.rs/clap-file/0.1.0/clap_file/output/struct.Output.html) types:
+Example usage of [`Input`](https://docs.rs/clap-file/0.2.0/clap_file/input/struct.Input.html) ans [`Output`](https://docs.rs/clap-file/0.2.0/clap_file/output/struct.Output.html) types:
 
 ````rust,no_run
 use std::io::{self, BufRead as _, Write as _};

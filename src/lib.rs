@@ -6,7 +6,7 @@
 //!
 //! ```toml
 //! [dependencies]
-//! clap-file = "0.1.0"
+//! clap-file = "0.2.0"
 //! ```
 //!
 //! # Examples
@@ -39,7 +39,7 @@
 //! }
 //! ```
 
-#![doc(html_root_url = "https://docs.rs/clap-file/0.1.0")]
+#![doc(html_root_url = "https://docs.rs/clap-file/0.2.0")]
 #![warn(missing_docs)]
 
 pub use self::{input::*, output::*};

@@ -3,7 +3,7 @@ members = ["xtask"]
 
 [package]
 name = "clap-file"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
 rust-version = "1.74.0"
 description = "Provides types for clap's derive interface, enabling easy handling of input/output with automatically opened files or standard input/output based on command-line arguments."
