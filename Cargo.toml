@@ -1,0 +1,39 @@
+[workspace]
+members = ["xtask"]
+
+[package]
+name = "clap-file"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.74.0"
+description = "Provides types for clap's derive interface, enabling easy handling of input/output with automatically opened files or standard input/output based on command-line arguments."
+readme = "README.md"
+repository = "https://github.com/gifnksm/clap-file"
+license = "MIT OR Apache-2.0"
+keywords = []
+categories = []
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[package.metadata.cargo-sync-rdme.badge]
+style = "flat-square"
+
+[package.metadata.cargo-sync-rdme.badge.badges]
+maintenance = true
+license = { link = "#license" }
+crates-io = true
+docs-rs = true
+rust-version = true
+github-actions = { workflows = "ci.yml" }
+codecov = true
+
+[dependencies]
+
+[dev-dependencies]
+[build-dependencies]
+
+[profile.dev]
+
+[profile.release]
+
+[badges]
+maintenance = { status = "passively-maintained" }
