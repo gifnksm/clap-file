@@ -2,20 +2,47 @@
 //!
 //! # Usage
 //!
-//! Add this to your `Cargo.toml`:
+//! Run `cargo add clap-file` or add this to your `Cargo.toml`:
 //!
 //! ```toml
 //! [dependencies]
 //! clap-file = "0.0.0"
 //! ```
+//!
+//! # Examples
+//!
+//! Example usage of [`Input`] ans [`Output`] types:
+//!
+//! ```rust,no_run
+//! use std::io::{self, BufRead as _, Write as _};
+//!
+//! use clap::Parser as _;
+//! use clap_file::{Input, Output};
+//!
+//! #[derive(Debug, clap::Parser)]
+//! struct Args {
+//!     /// Input file. If not provided, reads from standard input.
+//!     input: Input,
+//!     /// output file. If not provided, reads from standard output.
+//!     output: Output,
+//! }
+//!
+//! fn main() -> io::Result<()> {
+//!     let args = Args::parse();
+//!     let input = args.input.lock();
+//!     let mut output = args.output.lock();
+//!     for line in input.lines() {
+//!         let line = line?;
+//!         writeln!(&mut output, "{line}")?;
+//!     }
+//!     Ok(())
+//! }
+//! ```
 
 #![doc(html_root_url = "https://docs.rs/clap-file/0.0.0")]
+#![warn(missing_docs)]
 
-#[cfg(test)]
-mod tests {
-    #[test]
-    fn it_works() {
-        let result = 2 + 2;
-        assert_eq!(result, 4);
-    }
-}
+pub use self::{input::*, output::*};
+
+mod input;
+mod output;

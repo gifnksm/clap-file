@@ -26,14 +26,9 @@ rust-version = true
 github-actions = { workflows = "ci.yml" }
 codecov = true
 
-[dependencies]
-
 [dev-dependencies]
+clap = { version = "4.5.18", features = ["derive"] }
 [build-dependencies]
-
-[profile.dev]
-
-[profile.release]
 
 [badges]
 maintenance = { status = "passively-maintained" }
