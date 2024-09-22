@@ -9,7 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased] - ReleaseDate
 
+## [0.1.0] - 2024-09-22
+
 * First release
 
 <!-- next-url -->
-[Unreleased]: https://github.com/gifnksm/clap-file/commits/HEAD
+[Unreleased]: https://github.com/gifnksm/clap-file/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/gifnksm/clap-file/commits/v0.1.0

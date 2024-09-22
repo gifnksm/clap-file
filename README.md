@@ -20,7 +20,7 @@ Run `cargo add clap-file` or add this to your `Cargo.toml`:
 
 ````toml
 [dependencies]
-clap-file = "0.0.0"
+clap-file = "0.1.0"
 ````
 
 ## Examples
