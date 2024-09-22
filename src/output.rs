@@ -58,10 +58,10 @@ impl Output {
         Self(OutputInner::Stdout)
     }
 
-    /// Opens a file at the given path and creates a new [`Output`] instance that writes to it.
-    pub fn open(path: PathBuf) -> io::Result<Self> {
+    /// Creates a file at the given path and creates a new [`Output`] instance that writes to it.
+    pub fn create(path: PathBuf) -> io::Result<Self> {
         let path = Arc::new(path);
-        let file = File::open(&*path)?;
+        let file = File::create(&*path)?;
         let writer = Arc::new(Mutex::new(LineWriter::new(file)));
         Ok(Self(OutputInner::File { path, writer }))
     }
@@ -117,7 +117,7 @@ impl FromStr for Output {
         if s == "-" {
             return Ok(Self::stdout());
         }
-        Self::open(PathBuf::from(s))
+        Self::create(PathBuf::from(s))
     }
 }
 
