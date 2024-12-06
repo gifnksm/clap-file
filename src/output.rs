@@ -72,7 +72,6 @@ impl Output {
     }
 
     /// Returns `true` if this [`Output`] writes to a file.
-
     pub fn is_file(&self) -> bool {
         matches!(self.0, OutputInner::File { .. })
     }
@@ -91,7 +90,6 @@ impl Output {
     ///
     /// This lock is released when the returned [`LockedOutput`] instance is dropped.
     /// The returned `LockedOutput` instance implements [`Write`] trait for writing data.
-
     pub fn lock(&self) -> LockedOutput<'_> {
         let inner = match &self.0 {
             OutputInner::Stdout => {

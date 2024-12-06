@@ -75,7 +75,6 @@ impl Input {
     }
 
     /// Returns `true` if this [`Input`] reads from a file.
-
     pub fn is_file(&self) -> bool {
         matches!(self.0, InputInner::File { .. })
     }
@@ -94,7 +93,6 @@ impl Input {
     ///
     /// This lock is released when the returned [`LockedInput`] instance is dropped.
     /// The returned `LockedInput` instance implements [`Read`] and [`BufRead`] traits.
-
     pub fn lock(&self) -> LockedInput<'_> {
         let inner = match &self.0 {
             InputInner::Stdin => {
