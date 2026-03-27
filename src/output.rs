@@ -7,7 +7,7 @@ use std::{
 };
 
 #[track_caller]
-fn lock<T>(mutex: &Mutex<T>) -> MutexGuard<T> {
+fn lock<T>(mutex: &Mutex<T>) -> MutexGuard<'_, T> {
     mutex.lock().unwrap_or_else(|e| e.into_inner())
 }
 
