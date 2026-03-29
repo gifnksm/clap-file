@@ -10,4 +10,4 @@ pre-release-replacements = [
   {file = "src/lib.rs", search = "^//! clap-file = \".*\"$", replace = "//! clap-file = \"{{version}}\"", exactly = 1},
   {file = "src/lib.rs", search = "^#!\\[doc\\(html_root_url = \"https://docs.rs/clap-file/.*\"\\)\\]$", replace = "#![doc(html_root_url = \"https://docs.rs/clap-file/{{version}}\")]", exactly = 1},
 ]
-pre-release-hook = ["cargo", "xtask", "pre-release"]
+pre-release-hook = ["just", "pre-release"]
