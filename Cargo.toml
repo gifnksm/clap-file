@@ -1,6 +1,6 @@
 [package]
 name = "clap-file"
-version = "0.2.0"
+version = "0.3.0"
 edition = "2024"
 rust-version = "1.88"
 description = "Provides types for clap's derive interface, enabling easy handling of input/output with automatically opened files or standard input/output based on command-line arguments."

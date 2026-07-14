@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased] - ReleaseDate
 
+## [0.3.0] - 2026-07-14
+
 * **(Breaking Change)** Rename `LockedOutput::is_stdin` to `LockedOutput::is_stdout`
 * Bump MSRV to 1.88
 * Improve documentation examples and fix typos
@@ -22,6 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * First release
 
 <!-- next-url -->
-[Unreleased]: https://github.com/gifnksm/clap-file/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/gifnksm/clap-file/compare/v0.3.0...HEAD
+[0.3.0]: https://github.com/gifnksm/clap-file/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/gifnksm/clap-file/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/gifnksm/clap-file/commits/v0.1.0
