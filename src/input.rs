@@ -23,7 +23,8 @@ fn lock<T>(mutex: &Mutex<T>) -> MutexGuard<'_, T> {
 ///
 /// #[derive(Debug, clap::Parser)]
 /// struct Args {
-///     /// Input file. If not provided, reads from standard input.
+///     /// Input file. Defaults to standard input.
+///     #[arg(long, default_value = "-")]
 ///     input: Input,
 /// }
 ///

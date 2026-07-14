@@ -23,7 +23,8 @@ fn lock<T>(mutex: &Mutex<T>) -> MutexGuard<'_, T> {
 ///
 /// #[derive(Debug, clap::Parser)]
 /// struct Args {
-///     /// output file. If not provided, reads from standard output.
+///     /// Output file. Defaults to standard output.
+///     #[arg(long, default_value = "-")]
 ///     output: Output,
 /// }
 ///
@@ -168,7 +169,7 @@ pub struct LockedOutput<'a>(LockedOutputInner<'a>);
 
 impl LockedOutput<'_> {
     /// Returns `true` if this [`LockedOutput`] writes to standard output.
-    pub fn is_stdin(&self) -> bool {
+    pub fn is_stdout(&self) -> bool {
         matches!(self.0, LockedOutputInner::Stdout { .. })
     }
 

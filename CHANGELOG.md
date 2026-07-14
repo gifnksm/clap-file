@@ -9,7 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased] - ReleaseDate
 
+* **(Breaking Change)** Rename `LockedOutput::is_stdin` to `LockedOutput::is_stdout`
+* Bump MSRV to 1.88
+* Improve documentation examples and fix typos
+
 ## [0.2.0] - 2024-09-22
+
+* **(Breaking Change)** Rename `Output::open` to `Output::create` and use `File::create` to create the file
 
 ## [0.1.0] - 2024-09-22
 

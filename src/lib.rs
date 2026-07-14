@@ -11,7 +11,7 @@
 //!
 //! # Examples
 //!
-//! Example usage of [`Input`] ans [`Output`] types:
+//! Example usage of [`Input`] and [`Output`] types:
 //!
 //! ```rust,no_run
 //! use std::io::{self, BufRead as _, Write as _};
@@ -21,9 +21,11 @@
 //!
 //! #[derive(Debug, clap::Parser)]
 //! struct Args {
-//!     /// Input file. If not provided, reads from standard input.
+//!     /// Input file. Defaults to standard input.
+//!     #[arg(long, default_value = "-")]
 //!     input: Input,
-//!     /// output file. If not provided, reads from standard output.
+//!     /// Output file. Defaults to standard output.
+//!     #[arg(long, default_value = "-")]
 //!     output: Output,
 //! }
 //!
