@@ -27,6 +27,9 @@ clap-file = "0.3.0"
 
 Example usage of [`Input`] and [`Output`] types:
 
+[`Input`]: https://docs.rs/clap-file/0.3.0/clap_file/input/struct.Input.html "struct clap_file::input::Input"
+[`Output`]: https://docs.rs/clap-file/0.3.0/clap_file/output/struct.Output.html "struct clap_file::output::Output"
+
 ````rust,no_run
 use std::io::{self, BufRead as _, Write as _};
 
@@ -54,9 +57,6 @@ fn main() -> io::Result<()> {
     Ok(())
 }
 ````
-
-[`Input`]: https://docs.rs/clap-file/0.3.0/clap_file/input/struct.Input.html "struct clap_file::input::Input"
-[`Output`]: https://docs.rs/clap-file/0.3.0/clap_file/output/struct.Output.html "struct clap_file::output::Output"
 <!-- cargo-sync-rdme ]] -->
 
 ## Minimum supported Rust version (MSRV)
